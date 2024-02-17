@@ -1,0 +1,124 @@
+
+.wrapper{
+  background: transparent url('./assets/bg.jpg') scroll no-repeat 0 0 / cover;
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.component {
+  background-color: #212936;
+  max-width: 320px;
+  margin: 0 ;
+  padding: 1.5em;
+  border-radius: 30px;
+  text-align: center;
+}
+.name, .author{
+  display: block;
+  line-height: 1.4em;
+}
+.name{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #E5E7EB;
+  margin-top:15px;
+}
+.author {
+  font-size: 0.75rem;
+  color: #4D5562;
+  margin-bottom:15px;
+}
+.musicCover {
+  border-radius: 10%;
+  width: 100%;
+}
+.control__buttons{
+  cursor: pointer;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.control__buttons :nth-child(2){
+  background: #C93B76;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: auto 15px;
+  -webkit-box-shadow: 10px 10px 49px -15px #c93b76;
+    -moz-box-shadow: 10px 10px 49px -15px rgba(219,162,219,1);
+    box-shadow: 0px 1px 20px 0px #c93b76;
+}
+.playButton {
+  background: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+}
+.timeline__container{
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+.timeline__time{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  margin: 0 auto;
+  color: #828282;
+  font-size: 0.625rem;
+
+}
+.timeline__range {
+  width: 100%;
+  background-color: #C93B76;
+  -webkit-box-shadow: 10px 10px 49px -15px #ffffff75;
+  -moz-box-shadow: 10px 10px 49px -15px rgba(219,162,219,1);
+  box-shadow: 0px 1px 20px 0px #ffffff75;
+}
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input[type='range'] {
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    height: 6px;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #C93B76;
+    margin-top: -1px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+   -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: #C93B76;
+    box-shadow: -480px 0 0 480px #C93B76;
+  }
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+background-color: #C93B76; 
+}
+input[type="range"]::-moz-range-track {  
+background-color: #fff;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+background-color: #C93B76; 
+}
+input[type="range"]::-ms-fill-upper {  
+background-color: #C93B76;
+
+}
